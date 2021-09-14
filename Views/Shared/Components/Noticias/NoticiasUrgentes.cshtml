@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Noticia>
+<ul>
+    @foreach (var item in Model)
+    {
+
+        <li style="background-color:red;">
+            <a href="@item.Link"> @item.Titulo</a>
+        </li>
+    }
+</ul>

@@ -2,7 +2,19 @@
 
 <h1>Bem vindos @ViewData["Nome"] @ViewBag.Sobrenome @ViewBag.Nome</h1>
 <h2>@Model.Nome</h2>
+<br />
+<br />
+<br />
 
+<email  propriedade-publica="" mail-to="rodolfo"></email>
+
+
+<br />
+<br />
+<br />
+
+@*@await Component.InvokeAsync("Noticias", new { total = 4, noticiasUrgentes = false })*@
+<vc:noticias total="3" noticias-urgentes="true"></vc:noticias>
 
 @section footer{
 
