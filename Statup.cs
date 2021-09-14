@@ -1,4 +1,4 @@
-﻿using fiapweb.Contexts;
+﻿using fiapweb.core.Contexts;
 using fiapweb.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
