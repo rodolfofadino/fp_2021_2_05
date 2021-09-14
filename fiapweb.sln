@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fiapweb", "fiapweb.csproj", "{CD517AD5-BBFA-439B-A41B-2C7B98371284}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fiapweb", "fiapweb\fiapweb.csproj", "{E2B98051-3BCF-42B1-8AD7-190516E11D9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fiapweb.core", "..\fiapweb.core\fiapweb.core.csproj", "{B211D2F4-0A3E-4ADB-9FB4-44D4B574D896}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fiapweb.core", "fiapweb.core\fiapweb.core.csproj", "{237B03EE-5283-41CF-85CB-ED0869469AF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CD517AD5-BBFA-439B-A41B-2C7B98371284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD517AD5-BBFA-439B-A41B-2C7B98371284}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD517AD5-BBFA-439B-A41B-2C7B98371284}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD517AD5-BBFA-439B-A41B-2C7B98371284}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B211D2F4-0A3E-4ADB-9FB4-44D4B574D896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B211D2F4-0A3E-4ADB-9FB4-44D4B574D896}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B211D2F4-0A3E-4ADB-9FB4-44D4B574D896}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B211D2F4-0A3E-4ADB-9FB4-44D4B574D896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2B98051-3BCF-42B1-8AD7-190516E11D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2B98051-3BCF-42B1-8AD7-190516E11D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2B98051-3BCF-42B1-8AD7-190516E11D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2B98051-3BCF-42B1-8AD7-190516E11D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237B03EE-5283-41CF-85CB-ED0869469AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237B03EE-5283-41CF-85CB-ED0869469AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237B03EE-5283-41CF-85CB-ED0869469AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237B03EE-5283-41CF-85CB-ED0869469AF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
