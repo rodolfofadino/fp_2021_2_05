@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fiapweb", "fiapweb\fiapweb.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fiapweb.core", "fiapweb.core\fiapweb.core.csproj", "{237B03EE-5283-41CF-85CB-ED0869469AF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fiapweb.api", "fiapweb.api\fiapweb.api\fiapweb.api.csproj", "{0C887DCA-6AAB-47B3-8EB0-7F36EB2BE609}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{237B03EE-5283-41CF-85CB-ED0869469AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{237B03EE-5283-41CF-85CB-ED0869469AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{237B03EE-5283-41CF-85CB-ED0869469AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C887DCA-6AAB-47B3-8EB0-7F36EB2BE609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C887DCA-6AAB-47B3-8EB0-7F36EB2BE609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C887DCA-6AAB-47B3-8EB0-7F36EB2BE609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C887DCA-6AAB-47B3-8EB0-7F36EB2BE609}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
