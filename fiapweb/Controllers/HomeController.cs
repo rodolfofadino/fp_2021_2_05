@@ -14,9 +14,10 @@ namespace fiapweb.Controllers
         {
             ViewData["Nome"] = "Chuck";
             ViewBag.Sobrenome = "Noris";
-            
+            ViewBag.Comentario = "<script> alert('eh nois') </script>";
+
             //acesso ao DB
-            var pessoa = new Pessoa() { Nome="Maguila" };
+            var pessoa = new Pessoa() { Nome = "Maguila" };
 
 
             //return View("ViewQueNaoExiste");
@@ -27,6 +28,22 @@ namespace fiapweb.Controllers
         {
             return View();
         }
-      
+
+
+        public IActionResult Redirecionamento(string url)
+        {
+            return LocalRedirect(url);
+
+            //if (Url.IsLocalUrl(url))
+            //{
+            //    return Redirect(url);
+
+            //}
+            //else
+            //{
+            //    return Redirect("/");
+            //}
+        }
+
     }
 }

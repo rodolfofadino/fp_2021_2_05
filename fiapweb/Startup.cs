@@ -1,6 +1,7 @@
 ﻿using fiapweb.core.Contexts;
 using fiapweb.Middlewares;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +10,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace fiapweb
 {
-    public class Statup
+    public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
@@ -17,6 +18,20 @@ namespace fiapweb
             services.AddDbContext<DataContext>(options => options.UseSqlServer(connection));
             //services.AddControllers();
             services.AddControllersWithViews();
+
+            services.AddAuthentication("app")
+                .AddCookie("app", 
+                o =>
+                {
+                    o.LoginPath = "/account/index";
+                    o.AccessDeniedPath = "/account/denied";
+                
+                });
+
+            services.AddDataProtection()
+                .SetApplicationName("fiap-web")
+                .PersistKeysToFileSystem(new System.IO.DirectoryInfo(@"C:\Users\Rodolfof\Desktop"));
+
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -30,6 +45,9 @@ namespace fiapweb
             }
 
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

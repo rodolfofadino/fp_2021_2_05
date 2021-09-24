@@ -1,5 +1,7 @@
-﻿using fiapweb.core.Contexts;
+﻿using fiapweb.api.Filters;
+using fiapweb.core.Contexts;
 using fiapweb.core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,6 +14,9 @@ namespace fiapweb.api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     //[EnableCors("Default")]
+    //[CustomV2Authorize]
+    //[CustomAuthorize]
+    [Authorize]
     public class PaisesController : Controller
     {
         private DataContext _context;

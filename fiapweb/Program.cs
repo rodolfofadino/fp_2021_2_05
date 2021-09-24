@@ -14,7 +14,7 @@ namespace fiapweb
         public static IWebHost BuildWebHost(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args)
-                        .UseStartup<Statup>()
+                        .UseStartup<Startup>()
                         .Build();
         }
     }
