@@ -1,17 +1,38 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication8</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link href="~/css/jcarousel.basic.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
 
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+    <script src="~/js/jquery.jcarousel.js"></script>
+    <script src="~/js/site.js"></script>
     @RenderSection("header", false)
 </head>
 <body>
-    
-    @*<partial name="_menu" />*@
-   
-
-    @RenderBody()
+    <header>
+        <partial name="_Menu" />
+        @*@Html.Partial("_Menu")*@
 
 
-    @RenderSection("footer",false)
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
 
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; @DateTime.Now.Year - Fiap
+        </div>
+    </footer>
+    @await RenderSectionAsync("footer", required: false)
 </body>
 </html>
+

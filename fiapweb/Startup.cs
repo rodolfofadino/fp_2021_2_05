@@ -1,4 +1,5 @@
 ﻿using fiapweb.core.Contexts;
+using fiapweb.core.Services;
 using fiapweb.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.DataProtection;
@@ -31,7 +32,6 @@ namespace fiapweb
             services.AddDataProtection()
                 .SetApplicationName("fiap-web")
                 .PersistKeysToFileSystem(new System.IO.DirectoryInfo(@"C:\Users\Rodolfof\Desktop"));
-
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -43,6 +43,8 @@ namespace fiapweb
             {
                 app.UseDeveloperExceptionPage();
             }
+
+
 
             app.UseRouting();
 
