@@ -5,9 +5,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
 
 namespace fiapweb
 {
@@ -20,6 +22,13 @@ namespace fiapweb
             //services.AddControllers();
             services.AddControllersWithViews();
 
+            services.AddScoped<INoticiaService, NoticiaService>();
+            //services.AddTransient<INoticiaService, NoticiaService>();
+            //services.AddSingleton<INoticiaService, NoticiaService>();
+
+            services.AddMemoryCache();
+            //services.AddDistributedMemoryCache();
+
             services.AddAuthentication("app")
                 .AddCookie("app", 
                 o =>
@@ -28,6 +37,15 @@ namespace fiapweb
                     o.AccessDeniedPath = "/account/denied";
                 
                 });
+
+            services.Configure<GzipCompressionProviderOptions>(
+                o=>o.Level = System.IO.Compression.CompressionLevel.Optimal
+                );
+
+            services.AddResponseCompression(o =>
+            {
+                o.Providers.Add<GzipCompressionProvider>();
+            });
 
             services.AddDataProtection()
                 .SetApplicationName("fiap-web")
@@ -44,7 +62,16 @@ namespace fiapweb
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseResponseCompression();
 
+            app.UseStaticFiles(new StaticFileOptions {
+                OnPrepareResponse = ctx => {
+                    var durationInSeconds = 60 * 60 * 24 * 200;
+
+                    ctx.Context.Response.Headers[HeaderNames.CacheControl]
+                    = $"public,max-age={durationInSeconds}";
+                }
+            });
 
             app.UseRouting();
 

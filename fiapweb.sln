@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fiapweb.core", "fiapweb.cor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fiapweb.api", "fiapweb.api\fiapweb.api\fiapweb.api.csproj", "{0C887DCA-6AAB-47B3-8EB0-7F36EB2BE609}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthTest", "AuthTest\AuthTest.csproj", "{C51A5168-B1F1-4C32-AB43-474A69103487}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthTest", "AuthTest\AuthTest.csproj", "{C51A5168-B1F1-4C32-AB43-474A69103487}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
